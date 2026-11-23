@@ -1,0 +1,134 @@
+/* MAP
+ * §1 tema luminoasa (Outlook) si variabile comune  L9-L61
+ * §2 tema intunecata  L62-L105
+ * §3 teme colorate (luminoase)  L106-L125
+ * §4 densitate  L126-L128
+ */
+/* Teme: toate culorile sunt variabile CSS pe :root[data-theme]. Perechi fundal/text verificate pentru contrast. */
+
+/* §1 tema luminoasa (Outlook) si variabile comune */
+:root {
+  --font: "Segoe UI", "Segoe UI Web (West European)", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --side-w: 248px;
+  --list-w: 400px;
+  --list-h: 340px;
+  --rail-w: 48px;
+  --top-h: 48px;
+
+  --bg: #f5f5f5;
+  --surface: #fdfdfd;
+  --surface-2: #f0f0f0;
+  --surface-3: #e8e8e8;
+  --hover: #f0f0f0;
+  --sel: #ebf3fc;
+  --sel-strong: #cfe4fa;
+  --border: #e0e0e0;
+  --border-strong: #c4c4c4;
+  --text: #242424;
+  --text-2: #5c5c5c;
+  --text-3: #767676;
+  --accent: #0f6cbd;
+  --accent-hover: #115ea3;
+  --on-accent: #ffffff;
+  --accent-soft: #ebf3fc;
+  --accent-text: #0f6cbd;
+  --topbar: #0f6cbd;
+  --on-topbar: #ffffff;
+  --topbar-hover: rgba(255, 255, 255, .16);
+  --topbar-active: #0b5394;
+  --search-bg: #fdfdfd;
+  --search-text: #242424;
+  --rail-bg: #ebebeb;
+  --danger: #c50f1f;
+  --on-danger: #ffffff;
+  --danger-soft: #fde7e9;
+  --ok: #107c10;
+  --ok-soft: #e7f4e4;
+  --warn-bg: #fff4ce;
+  --warn-text: #4d3b00;
+  --warn-border: #e6c200;
+  --input-bg: #fdfdfd;
+  --chip-bg: #ececec;
+  --skel: #e6e6e6;
+  --paper: #ffffff;
+  --paper-border: #e0e0e0;
+  --shadow: 0 8px 28px rgba(0, 0, 0, .16), 0 0 2px rgba(0, 0, 0, .12);
+  --focus: #0f6cbd;
+  color-scheme: light;
+}
+
+/* §2 tema intunecata */
+:root[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --surface: #262626;
+  --surface-2: #202020;
+  --surface-3: #383838;
+  --hover: #323232;
+  --sel: #263547;
+  --sel-strong: #2d4a6b;
+  --border: #3a3a3a;
+  --border-strong: #5a5a5a;
+  --text: #ececec;
+  --text-2: #c4c4c4;
+  --text-3: #a0a0a0;
+  --accent: #479ef5;
+  --accent-hover: #62abf5;
+  --on-accent: #0b1a2b;
+  --accent-soft: #1f3349;
+  --accent-text: #79b8ff;
+  --topbar: #1f2a37;
+  --on-topbar: #ececec;
+  --topbar-hover: rgba(255, 255, 255, .1);
+  --topbar-active: #2e3e52;
+  --search-bg: #2e3a48;
+  --search-text: #ececec;
+  --rail-bg: #1e1e1e;
+  --danger: #f1707b;
+  --on-danger: #1b0a0c;
+  --danger-soft: #3f1d21;
+  --ok: #6ccb5f;
+  --ok-soft: #1f3320;
+  --warn-bg: #3d3214;
+  --warn-text: #f5dc8a;
+  --warn-border: #8a7320;
+  --input-bg: #1e1e1e;
+  --chip-bg: #383838;
+  --skel: #333333;
+  --paper: #fafafa;
+  --paper-border: #4a4a4a;
+  --shadow: 0 8px 28px rgba(0, 0, 0, .55), 0 0 2px rgba(0, 0, 0, .6);
+  --focus: #79b8ff;
+  color-scheme: dark;
+}
+
+/* §3 teme colorate (luminoase) */
+:root[data-theme="blue"] {
+  --bg: #e8f1fb; --surface: #fdfeff; --surface-2: #dfeaf7; --surface-3: #d2e2f4; --hover: #e6eef9;
+  --sel: #dceafa; --sel-strong: #bcd8f6; --border: #cddcee; --border-strong: #a9c1de;
+  --accent: #0f548c; --accent-hover: #0c3b5e; --accent-soft: #dceafa; --accent-text: #0f548c;
+  --topbar: #0f548c; --rail-bg: #d6e4f4; --chip-bg: #dde8f5; --focus: #0f548c;
+}
+:root[data-theme="purple"] {
+  --bg: #f4eefa; --surface: #fefcff; --surface-2: #ece2f6; --surface-3: #e2d4f0; --hover: #f1e9f8;
+  --sel: #efe4f8; --sel-strong: #dcc5ef; --border: #e0d2ec; --border-strong: #c2a8d8;
+  --accent: #6b2fa0; --accent-hover: #55237f; --accent-soft: #efe4f8; --accent-text: #6b2fa0;
+  --topbar: #5c2b8a; --rail-bg: #e6d9f2; --chip-bg: #ece2f5; --focus: #6b2fa0;
+}
+:root[data-theme="green"] {
+  --bg: #ecf6ef; --surface: #fdfffd; --surface-2: #e0f0e5; --surface-3: #d1e8d8; --hover: #e6f3ea;
+  --sel: #def0e4; --sel-strong: #bfe2ca; --border: #cfe3d6; --border-strong: #a5c9b0;
+  --accent: #107c41; --accent-hover: #0b5a2f; --accent-soft: #def0e4; --accent-text: #0e6b38;
+  --topbar: #0b6a37; --rail-bg: #d7ebdd; --chip-bg: #dfeee4; --focus: #107c41;
+}
+
+/* §4 densitate si marime text */
+:root { --row-pad: 10px; --row-gap: 2px; --tree-h: 32px; --fs: 1; font-size: calc(16px * var(--fs)); }
+:root[data-density="compact"] { --row-pad: 5px; --row-gap: 0px; --tree-h: 28px; }
+:root[data-font-size="xsmall"] { --fs: 0.82; }
+:root[data-font-size="small"] { --fs: 0.9; }
+:root[data-font-size="normal"] { --fs: 1; }
+:root[data-font-size="large"] { --fs: 1.15; }
+:root[data-font-size="xlarge"] { --fs: 1.3; }
+:root[data-font-size="xxlarge"] { --fs: 1.45; }
