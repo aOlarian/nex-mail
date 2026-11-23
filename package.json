@@ -1,7 +1,7 @@
 {
   "name": "nex-mail",
   "productName": "NexMail",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local desktop email client for IMAP and SMTP accounts",
   "author": "VEROBOTS S.R.L.",
   "license": "MIT",
@@ -11,12 +11,36 @@
     "test": "node --test --test-concurrency=1 tests/*.test.js",
     "dist": "electron-builder --win nsis --x64 -c.win.signAndEditExecutable=false"
   },
-  "devDependencies": { "electron": "42.1.0", "electron-builder": "26.15.3" },
+  "devDependencies": {
+    "electron": "42.1.0",
+    "electron-builder": "26.15.3"
+  },
   "build": {
     "appId": "eu.verobots.nexmail",
-    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
-    "nsis": { "perMachine": false, "allowElevation": false, "artifactName": "nex-mail-install.exe" },
-    "files": ["main.cjs", "serviciu.js", "src/**/*", "web/**/*", "proto/**/*", "package.json"],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "perMachine": false,
+      "allowElevation": false,
+      "artifactName": "nex-mail-install.exe"
+    },
+    "files": [
+      "main.cjs",
+      "serviciu.js",
+      "src/**/*",
+      "web/**/*",
+      "proto/**/*",
+      "package.json",
+      "enterprise.cjs"
+    ],
     "asar": true
   }
 }

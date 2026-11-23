@@ -6,6 +6,7 @@
 
 // §1 Desktop initialization and request identity
 const { app, BrowserWindow, dialog, session } = require('electron')
+const { showEnterprise } = require('./enterprise.cjs')
 const { randomBytes, timingSafeEqual } = require('node:crypto')
 const path = require('node:path')
 const service = require('./serviciu')
@@ -49,6 +50,7 @@ async function openMail() {
     if (new URL(url).origin !== origin) event.preventDefault()
   })
   await window.loadURL(`${origin}/mail/`)
+  showEnterprise(window)
 }
 
 if (!app.requestSingleInstanceLock()) {
